@@ -1,0 +1,11 @@
+{
+"eslint.run": "onSave",
+"editor.codeActionsOnSave": {
+    "source.fixAll": true
+},
+"search.exclude": {
+    "package-lock.json": true,
+    "coverage/**": true,
+    
+}
+}
