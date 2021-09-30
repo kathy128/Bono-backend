@@ -9,11 +9,9 @@ const app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-const myMiddleware = (req, res, next) => {
-  throw new Error('my new error')
-}
+
 app.use('/', indexRouter);
-app.use('/users',myMiddleware, usersRouter);
+app.use('/users', usersRouter);
 
 app.use((req, res, next)=>{
   res.status(404);

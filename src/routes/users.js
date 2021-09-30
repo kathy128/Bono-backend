@@ -4,7 +4,9 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
-  res.json({ data: 'my users routes' });
+  // throw new ApiError('Bad request', 400);
+  res.send({ data: 'My users route',
+statusCode: 200 });
 });
 
 module.exports = router;
